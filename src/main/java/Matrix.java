@@ -6,8 +6,8 @@ public class Matrix {
         if(matrix.length == 0)
             return false;
 
-        for (int i = 0; i < matrix.length; i++) {
-            if(matrix.length != matrix[i].length){
+        for (int[] ints : matrix) {
+            if (matrix.length != ints.length) {
                 return false;
             }
         }
@@ -15,11 +15,17 @@ public class Matrix {
         return true;
     }
 
-    public double averageArrayElements(int[] array){
+    public boolean averageArrayElements(int[] array){
+        if(array.== null) {
+            return false;
+        }
+        if(array.length == 0) {
+            return false;
+        }
         int sum = 0;
         double avg = 0.0;
-        for (int i = 0; i < array.length; i++) {
-            sum += array[i];
+        for (int j : array) {
+            sum += j;
         }
 
         avg = (double) sum / array.length;

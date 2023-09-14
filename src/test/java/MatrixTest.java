@@ -1,5 +1,7 @@
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MatrixTest {
 
@@ -13,22 +15,22 @@ public class MatrixTest {
                 {4, 5, 6},
                 {7, 8, 9}
         };
-        assertTrue(matrixChecker.isSquareMatrix(squareMatrix));
+        Assertions.assertTrue(matrixChecker.isSquareMatrix(squareMatrix));
 
         // Перевірка для неквадратної матриці
         int[][] nonSquareMatrix = {
                 {1, 2, 3},
                 {4, 5, 6}
         };
-        assertFalse(matrixChecker.isSquareMatrix(nonSquareMatrix));
+        Assertions.assertFalse(matrixChecker.isSquareMatrix(nonSquareMatrix));
 
         // Перевірка для порожньої матриці
         int[][] emptyMatrix = {};
-        assertFalse(matrixChecker.isSquareMatrix(emptyMatrix));
+        Assertions.assertFalse(matrixChecker.isSquareMatrix(emptyMatrix));
 
         // Перевірка для null матриці
         int[][] nullMatrix = null;
-        assertFalse(matrixChecker.isSquareMatrix(nullMatrix));
+        Assertions.assertFalse(matrixChecker.isSquareMatrix(nullMatrix));
     }
 
     @Test
